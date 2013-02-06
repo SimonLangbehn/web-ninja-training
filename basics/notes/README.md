@@ -9,8 +9,8 @@
 * Node.JS
 * Ajax
 * Wireshark
-* Browser Dev Tools
-
+* Browser / Dev Tools
+* Links
 
 ## Ablauf
 
@@ -205,4 +205,121 @@ Bedeutung:
 [TimeTracker Demo in HTML](../src/html/timetracker.html)
 
 ### HTML5
+
+* Ist der neue HTML Standard, der noch in der *Entwicklung* ist
+* Neue HTML-Elemente und Attribute
+* Voller CSS3 Support
+* Video und Audio
+* Local Storage
+* WebWorker
+
+
+<q>HTML5 ist eine Ansammlung von Componenten, die zur Entwicklung von innovativen Webanwendungen dienen.</q>
+
+#### HTML5 Componenten
+
+* ![Semantics](images/class-header-semantics.jpg)
+	* Mehr semantische HTML-Elemente fuer die feinere Strukturierung von Inhalten
+* ![CSS3](images/class-header-css3.jpg)
+	* Mehr Effekte und Stylingmoeglichkeiten
+	* Web Open Font Format (WOFF)
+* ![Connectivity](images/class-header-connectivity.jpg)
+	* Web Sockets
+* ![Performance](images/class-header-performance.jpg)
+	* Web Workers 
+	* XMLHttpRequest 2
+* ![3D](images/class-header-3d.jpg)
+	* SVG
+	* Canvas
+	* WebGL
+	* CSS3 3D
+* ![Device](images/class-header-device.jpg)
+	* Bessere API fuer den Zugriff auf das entsprechende Device
+* ![Offline](images/class-header-offline.jpg)
+	* Local Storage
+	* Indexed DB
+	* File API
+* ![Multimedia](images/class-header-multimedia.jpg)
+	* Audio
+	* Video
+
+##### Semantics
+
+Semantische Elemente werden definiert, um Inhalten eine bestimmte Bedeutung zu geben. Diese Inhalte stehen in einer bestimmten Beziehung zu einandern.
+
+* Section
+	* Abschnitt eines Dokumentes
+	* Vergleichbar mit Div
+* Header
+	* Enthaelt Navigationslinks, Ueberschriften
+	* In Verbingung mit Section nutzbar
+	* Duerfen nicht verschachtelt werden oder in Footer, Address verwendet werden
+* Footer
+	* Enthaelt Metainformationen zu den Inhalten
+	* Verhalten wie Header
+	* Kann auch am Ende jeder Section verwendet werden
+* Aside
+	* Enthaelt Informationen zu zusaetzlichen Inhalten, die nicht direkt mit dem Hauptinhalt etwas zu tun haben.
+	* z.B. Sidebar
+	* Hilft Suchmaschinen und Screenreadern Inhalte die nicht zum Thema gehoeren als solche zu erkennen
+* Nav
+	* Enthaelt Navigationselemente, die auf Inhalte oder andere Dokumente verweisen.
+	* Typischerweise wird es in Head platziert.
+	* Sollte nur 1 Mal vorkommen
+* Article
+	* Container fuer Inhalte die in sich zusammenhaengend sind, aber von dem Rest der Seite entkoppelt
+	* Blogeintrag
+* Figure
+	* Definiert einen Container fuer einen in sich abgeschlossenen Inhalt:
+	* Bilder, Diagramme, Codefragmente
+* Figcaption
+	* Definiert einen Titel fuer den Figure-Container
+* Mark
+	* Wird benutzt um bestimmte Fragmente von Inhalten hervorzuheben
+* Time
+	* Markiert Datumsinhalte als solche
+	* Bietet die Moeglichkeit Datumsinformationen in Attributen zu hinterlegen
+* Progress
+	* Native Progressbar
+
+
+
+#### HTML5 - TimeTracker - Demo
+
+[TimeTracker Demo in HTML](../src/html/timetracker-html5.html)
+
+
+## Browser
+
+
+
+
+## Links
+
+### Stuff
+
+* [https://github.com/konstantindenerz/web-ninja-training/](https://github.com/konstantindenerz/web-ninja-training/)
+
+### Web
+
+* [www.evolutionoftheweb.com/](www.evolutionoftheweb.com/)
+* [www.20thingsilearned.com/](www.20thingsilearned.com/)
+
+### HTML5
+
+* [http://www.w3.org/html/logo/](http://www.w3.org/html/logo/)
+* [www.html5rocks.com/](www.html5rocks.com/)
+* [www.w3.org/](www.w3.org/)
+* [http://www.selfhtml5.org/html5-tag-systematik/](http://www.selfhtml5.org/html5-tag-systematik/)
+
+### CSS
+
+* [www.lesscss.de](www.lesscss.de)
+* [sass-lang.com/](sass-lang.com/)
+* [www.webdesignerwall.com/trends/47-amazing-css3-animation-demos](www.webdesignerwall.com/trends/47-amazing-css3-animation-demos)
+
+### SharePoint
+
+* [Browser Support: technet.microsoft.com/en-us/library/cc263526.aspx#supportmatrix](Browser Support: technet.microsoft.com/en-us/library/cc263526.aspx#supportmatrix)
+
 

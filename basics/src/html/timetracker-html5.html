@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Time Tracker - Demo mit HTML5
+	</title>
+</head>
+<body>
+	<section>
+		<head>
+			<h1>Time Tracker</h1>
+		</head>
+	</section>
+	<section id='new'>
+		<head>
+			<h2>New</h2>
+		</head>
+		<input type='text' value='Start'>
+		<input type='text' value='End'>
+		<input type='text' multiple value='Beschreibung'>
+		<button type='button'>--></button>
+	</section>
+	<section id='history'>
+		<head>
+			<h2>History</h2>
+		</head>
+		<table>
+			<tr>
+				<th>
+					Start
+				</th>
+				<th>
+					End
+				</th>
+				<th>
+					Description
+				</th>
+			</tr>
+			<tr>
+				<td>
+					<time datetime='2013-02-07'>07.02.2013</time>
+				</td>
+				<td>
+					<time datetime='2013-02-07'>07.02.2013</time>
+				</td>
+				<td>
+					Web Ninja Workshop
+					<details> HTML, CSS, JS</details>
+				</td>
+			</tr>
+		</table>
+	</section>
+</body>
+</html>
