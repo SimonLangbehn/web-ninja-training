@@ -119,7 +119,7 @@ Diesen Style koennen wir entweder direkt in einem Style block definieren:
 oder das Einbinden von ueber einen Link
 
 <code>
-&lt;link rel='stylesheet' type='text/css' href='mycssfile.css'>
+&lt;link rel='stylesheet' type='text/css' href='mycssfile.css' />
 </code>
 
 rel-Attribut beschreibt den Typ des Links (z.B. Shortcut Icon).
@@ -208,6 +208,7 @@ Bedeutung:
 
 * Ist der neue HTML Standard, der noch in der *Entwicklung* ist
 * Neue HTML-Elemente und Attribute
+	* data-* Attribute
 * Voller CSS3 Support
 * Video und Audio
 * Local Storage
@@ -289,6 +290,98 @@ Semantische Elemente werden definiert, um Inhalten eine bestimmte Bedeutung zu g
 [TimeTracker Demo in HTML](../src/html/timetracker-html5.html)
 
 
+## CSS
+
+* Cascading Stylesheets ist eine deklarative Sprache fuer Stilvorlagen von strukturierten Dokumenten
+* Unterstuetzt Vererbung fuer Auszeichnungsattribute
+* Style fuer verschieden Ausgabemedien
+* Stylen von strukturierten Inhalten findet ueber CSS und nicht ueber HTML statt. HTML-Elemente wie Font und Center sind deprecated.
+* CSS2 und 2.1 ist der aktuelle Stand
+* CSS3 ist in der Entwicklung
+
+### Struktur
+
+Der Aufbau einer CSS-Regel:
+
+<pre><code>
+	Selector [, Selector2, ...]
+	{
+		Property-1: Value-1;
+		Property-2: Value-2;
+		...
+		Property-n: Value-n;
+	}
+	/* My Comment */
+</code></pre>
+
+* Der Selektor gibt an fuer welchen Bereich des Dokumentes der Style gilt.
+* Ein Styleblock kann fuer mehrere Selektoren definiert werden (Vermeidung von Redundanz)
+
+<table>
+	<caption>einfache Selektoren</caption>
+	<tr><th>Selektor</th><th>Bedeutung</th><th>HTML-Beispiel</th></tr>
+	<tr><td>*</td><td>Selektiert jedes Element</td><td>&lt;div>&lt;/div></td></tr>
+	<tr><td>Bubu</td><td>Selektiert jedes mit dem Tagname Bubu</td><td>&lt;Bubu>&lt;/Bubu></td></tr>
+	<tr><td>.foobar</td><td>Selektiert jedes Element mit der Klasse foobar</td><td>&lt;div class='foobar'>&lt;/div></td></tr>
+	<tr><td>#bubu</td><td>Selektiert jedes Element mit der ID bubu</td><td>&lt;div id='bubu'>&lt;/div></td></tr>
+	<tr><td>[bubu]</td><td>Selektiert jedes Element dessen bubu-Attribut gesetzt ist, egal welchen Wert dieses Attribut hat</td><td>&lt;div bubu='foobar'>&lt;/div></td></tr>
+	<tr><td>[bubu]</td><td>Selektiert jedes Element dessen bubu-Attribut den Wert foobar hat</td><td>&lt;div bubu='foobar'>&lt;/div></td></tr>
+</table>
+
+
+<table>
+	<caption>Kombinatoren</caption>
+	<tr><th>Selektor</th><th>Bedeutung</th><th>HTML-Beispiel</th></tr>
+	<tr><td>Bubu Foobar</td><td>Selektiert alle Foobar-Elemente, die Nachfahren von Bubu-Element sind</td><td>&lt;div>&lt;/div></td></tr>
+	<tr><td>Bubu > Foobar</td><td>Selektiert alle Foobar-Elemente, die ein Kind-Element von Bubu-Element sind</td><td>&lt;div>&lt;/div></td></tr>
+	
+</table>
+
+
+
+<table>
+	<caption>Pseudoklassen</caption>
+	<tr><th>Selektor</th><th>Bedeutung</th><th>HTML-Beispiel</th></tr>
+	<tr><td>a:link</td><td>Selektiert unbesuchte Verweise</td><td>&lt;a>&lt;/a></td></tr>
+	<tr><td>a:visited</td><td>Selektiert besuchte Verweise</td><td>&lt;a>&lt;/a></td></tr>
+	<tr><td>a:active</td><td>Selektiert das Element das gerade angeklickt ist</td><td>&lt;a>&lt;/a></td></tr>
+	<tr><td>a:hover</td><td>Selektiert das Element ueber dem gerade die Maus drueber ist.</td><td>&lt;a>&lt;/a></td></tr>
+	<tr><td>a:focus</td><td>Selektiert das Element das gerade den Fokus hat</td><td>&lt;a>&lt;/a></td></tr>
+	<tr><td>a:first-child</td><td>Selektiert Elemente, die das erste Kind ihres Elternelementes sind</td><td>&lt;a>&lt;/a></td></tr>
+</table>
+
+* Style sollte nicht Inline definiert werden!
+* Ueber das @media Attribut koennen Styles fuer verschiedene Ausgabemedien deklariert weden:
+	* all
+	* print
+	* projection
+	* screen
+	* tv
+	* ...
+* In CSS3 wurden Media Queries eingefuehrt.
+	* Damit laesst sich Style nicht nur fuer ein Medium definieren, sondern auch fuer bestimmte Eigenschaften des Mediums:
+		* Breite und Höhe des Browserfensters
+		* Breite und Höhe des Gerätes
+		* Orientierung (Quer- oder Hochformat)
+		* Bildschirmauflösung
+
+Beispiel fuer Media Queries:
+
+<pre>
+<code>
+@media screen and (max-width: 1024px){
+	html {
+		color: red;
+	}	
+
+	div {
+		font-family: 'Helvetica';
+	}
+}
+</code>
+</pre>
+In diesem Beispiel wird der Style angewandt, wenn das Medium ein Bildschirm ist und die Breite des Fensters kleiner 1025px ist.
+
 ## Browser
 
 
@@ -314,9 +407,14 @@ Semantische Elemente werden definiert, um Inhalten eine bestimmte Bedeutung zu g
 
 ### CSS
 
+* [http://de.wikipedia.org/wiki/Cascading_Style_Sheets](http://de.wikipedia.org/wiki/Cascading_Style_Sheets)
+* [http://de.wikipedia.org/wiki/Reset-Stylesheet](http://de.wikipedia.org/wiki/Reset-Stylesheet)
 * [www.lesscss.de](www.lesscss.de)
 * [sass-lang.com/](sass-lang.com/)
 * [www.webdesignerwall.com/trends/47-amazing-css3-animation-demos](www.webdesignerwall.com/trends/47-amazing-css3-animation-demos)
+* [http://www.colorzilla.com/gradient-editor/](http://www.colorzilla.com/gradient-editor/)
+* [http://www.google.com/webfonts](http://www.google.com/webfonts)
+* [http://www.fontsquirrel.com/](http://www.fontsquirrel.com/)
 
 ### SharePoint
 
