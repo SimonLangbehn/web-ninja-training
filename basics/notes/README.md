@@ -124,4 +124,85 @@ oder das Einbinden von ueber einen Link
 
 rel-Attribut beschreibt den Typ des Links (z.B. Shortcut Icon).
 
+### &lt;BODY> &lt;/BODY>
+
+Im Body werden die Inhalte strukturiert abgelegt.
+
+![Body-Element mit Inhalten](images/body.png)
+
+Beispiel fuer ein Bild:
+
+<code>
+&lt;img src='images/cat.png' alt='The Murakamicat' width='200px'>
+</code>
+
+Beispiel fuer ein Div und einen Absatz mit Text (Paragraph):
+
+<code>
+&lt;div>&lt;p>Text&lt;/p>&lt;/div>
+</code>
+
+Form-Element ist ein Container fuer Form-basierte Elemente. Einige davon koennen Werte enthalten, 
+die durch die Anwender bearbeitbar sind und die an den Server fuer die weitere Verarbeitung geschickt werden koennen.
+
+<code>
+&lt;form action="http://www.google.com/search" method="get">
+
+ &lt;label>Google: &lt;input type="search" name="q">&lt;/label>
+ 
+ &lt;input type="submit" value="Search...">
+
+&lt;/form>
+</code>
+
+### &lt;TABLE> &lt;/TABLE>
+
+<table>
+  <tr><th>Item</th><th>Turnover / Year</th><th>Quantity</th></tr>
+  <tr><td>Coffee</td><td>$ 347,456.00</td><td>422,232</td></tr>
+  <tr><td>Cake</td><td>$ 69,123.00</td><td>42,202</td></tr>
+</table>
+
+Kommen wir zu den Tabellen. Tabellen sind fuer die tabellarische Darstellung von Informationen da. 
+Wie man oben erkennen kann, habe ich eine Tabelle mit 2 Spalten und 3 Zeilen angelegt. Die erste Zeile ist eine Kopfzeile.
+
+Tabellen koennen aber nicht nur fuer das Anzeigen von tabellarischen Inhalten verwendet werden, sondern auch fuer die Ausrichtung von Inhalten.
+
+### DOCTYPE
+
+Um dem Browser mitzuteilen in welcher HTML-Version die HTML-Datei erstellt wurde, wird vor dem HTML-Tag der DocType definiert:
+
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+Bedeutung:
+
+* DOCTYPE HTML PUBLIC: Bezug auf die offentlich verfuegbare HTML-DTD
+* W3C: Herausgeber der DTD
+* HTML: Dokumenttyp
+* 4.01: Sprachversion
+* Transitional: Sprachvariante (Es gibt 3)
+* EN: steht fuer die Sprache in der die HTML-Tags inklusive der HTML-Attribute geschrieben wurden (nicht die Sprache der Inhalte)
+
+
+#### Strict
+
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w4.org/TR/html4/strict.dtd">
+
+* BSP: Inhalte muessen in Block-Elementen stehen und duerfen nicht direkt unter BODY-ELEMENT auftauchen.
+
+#### Transitional
+
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w4.org/TR/html4/loose.dtd">
+
+* Enthaelt etwas lockere Regeln als in Strict
+
+#### HTML5
+
+&lt;!DOCTYPE html>
+
+### HTML - TimeTracker - Demo
+
+[TimeTracker Demo in HTML](../src/html/timetracker.html)
+
+### HTML5
 
