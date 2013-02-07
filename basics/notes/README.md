@@ -387,11 +387,79 @@ In diesem Beispiel wird der Style angewandt, wenn das Medium ein Bildschirm ist 
 
 [TimeTracker Demo in HTML mit CSS](../src/css/timetracker.html)
 
+## HTTP
+
+* Hypertext Transfer Protokol ist ein Transferprotokoll zur Uebertragung von Daten
+* Es wird hauptsaechlich eingesetzt um eine Webseite aus World Wide Web in den Browser zu laden.
+* Die Kommunikationseinheiten zwischen Client und Server werden als Nachrichten bezeichnet, von denen es zwei unterschiedliche Arten gibt.
+	* Anfrage (Request) wird vom Client an den Server geschickt
+	* Antwort (Response) wird vom Server an den Client geschickt, als Reaktion auf die Anfrage
+
+* Die Nachrichten bestehen aus 2 Teilen
+	* Nachrichtenkopf oder auch HTTP-Header genannt
+		* Der Kopf enthaelt Informationen ueber den Koerper, z.B. 
+			* welche Encodierung verwendet wird.
+			* Den Typ der Inhalte
+			* Die Laenge der Inhalte
+			* Cookies
+		* Diese Informationen sind notwendig, damit der Empfaenger die Nachricht richtig interpretiert
+		* Jede Zeile im Header wird durch einen Zeilenumbruch getrennt
+	* Nachrichtenkoerper oder auch Message Body / Body genannt
+
+
+* Ungueltige Zeichen in der Url werden mit %-kodiert. Leerzeichen wird zu **%20**
+* Header und Body werden durch eine Leerzeile getrennt
+
+* Protokollversionen
+	* HTTP/1.0
+		* Hier bei jedem Request die Verbindung immer wieder aufgebaut
+		* Bei 10 Bilder auf einer Seite, wird die Verbindung 11 Aufgebaut
+	* HTTP/1.1
+		* Hier kann der Client dem Server mitteilen, dass der Verbindungsabbau nicht stattfinden soll (keep-alive), bis alle Ressourcen geladen sind
+
+* Das Protokoll ist zustandlos. Die Informationen aus frueheren Nachrichten gehen verloren.
+	* Um Informationen von Nachricht zu Nachricht zu transportieren, werden Cookies verwendet.
+		* Key-Value-Pairs
+	* Ueber Cookies werden z.B. Sitzungsinformationen mitgegeben (Session ID)
+
+* HTTP-Methoden
+	* Get
+		* Methode fuer das Abholen von Daten auf dem Server
+		* Abrufen von Ressourcen
+	* Put
+		* Methode fuer das Uebertragen von Daten an den Server
+		* Hier werden die Inhalte im Body verschickt z.B. als Key-Value-Pair
+		* Weitere Daten koennen auch an die URI gebunden werden
+	* Delete
+		* Mit der Delete Methode kann das Loeschen von Daten auf dem Server realisiert werden
+	* Head
+		* Ruft den Kopf ab, aber nicht den Body
+		* Z.B. zuer Pruefung von Metainformationen
+
+	* Weitere Methoden
+		* Put
+			* Dient zum Hochladen einer Ressource auf den Server mit der Angabe der URI
+		* Delete
+			* Loescht Ressourcen auf dem Server
+		* Options
+			* Liefert vom Server eine Liste mit unterstuetzten Methoden und Features
+
+* Ajax
+ * Asynchronous JavaScript and XML
+ * Bezeichnet das Konzept der asynchronen Uebertragung von Daten
+ * Ermoeglicht eine HTTP-Anfrage durchzufuehren, waehrend eine HTML-Seite angezeigt wird.
+ * XMLHttpRequest
+ * Beispiel am FlipChart
+
+* jQuery HTTP - Beispiel
+	* $.ajax({url: 'http://localhost:12345', type:'GET'});
+	* $.ajax({url: 'http://localhost:12345', data: {name:"Foobar"}, type:'POST'});
 
 ## Browser
 
-
-
+### Debugging
+### Profiling
+### Network
 
 ## Links
 
@@ -403,6 +471,9 @@ In diesem Beispiel wird der Style angewandt, wenn das Medium ein Bildschirm ist 
 
 * [www.evolutionoftheweb.com/](www.evolutionoftheweb.com/)
 * [www.20thingsilearned.com/](www.20thingsilearned.com/)
+* [http://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol](http://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
+* [http://de.wikipedia.org/wiki/HTTP-Statuscode](http://de.wikipedia.org/wiki/HTTP-Statuscode)
+* [http://de.wikipedia.org/wiki/Fehlerseite](http://de.wikipedia.org/wiki/Fehlerseite)
 
 ### HTML5
 
@@ -423,10 +494,16 @@ In diesem Beispiel wird der Style angewandt, wenn das Medium ein Bildschirm ist 
 * [http://www.fontsquirrel.com/](http://www.fontsquirrel.com/)
 * [http://www.css3maker.com/](http://www.css3maker.com/)
 
+### JS
+
+* [http://jquery.com/](http://jquery.com/)
+* [http://api.jquery.com/](http://api.jquery.com/)
+
 ### AJAX
 
+* [http://de.wikipedia.org/wiki/Ajax_(Programmierung)](http://de.wikipedia.org/wiki/Ajax_(Programmierung))
 * [http://de.wikipedia.org/wiki/XMLHttpRequest](http://de.wikipedia.org/wiki/XMLHttpRequest)
-
+* [http://de.selfhtml.org/diverses/mimetypen.htm](http://de.selfhtml.org/diverses/mimetypen.htm)
 ### SharePoint
 
 * [Browser Support: technet.microsoft.com/en-us/library/cc263526.aspx#supportmatrix](Browser Support: technet.microsoft.com/en-us/library/cc263526.aspx#supportmatrix)
