@@ -421,6 +421,11 @@ In diesem Beispiel wird der Style angewandt, wenn das Medium ein Bildschirm ist 
 * [http://www.colorzilla.com/gradient-editor/](http://www.colorzilla.com/gradient-editor/)
 * [http://www.google.com/webfonts](http://www.google.com/webfonts)
 * [http://www.fontsquirrel.com/](http://www.fontsquirrel.com/)
+* [http://www.css3maker.com/](http://www.css3maker.com/)
+
+### AJAX
+
+* [http://de.wikipedia.org/wiki/XMLHttpRequest](http://de.wikipedia.org/wiki/XMLHttpRequest)
 
 ### SharePoint
 
