@@ -1,0 +1,53 @@
+<html>
+
+<head>
+	<script type='text/javascript' src='jquery.js'>
+	</script>
+	<script type='text/javascript'>
+		$(function(){
+
+			// define proxy for send method
+			function registerAjaxCallbacks(onStart, onComplete){
+
+				if(!XMLHttpRequest.isProxy){
+
+					XMLHttpRequest.isProxy = true;
+					var baseSend = XMLHttpRequest.prototype.send;
+					
+					XMLHttpRequest.prototype.send = function(){
+						
+						this.onloadend = onComplete;
+						
+						onStart(this)
+						baseSend.apply(this, arguments);
+						
+					};
+				}
+			}
+
+			
+			registerAjaxCallbacks(function(){console.log('onAjaxSend');}, function(){console.log('onAjaxComplete');});
+
+
+			// can be used for jquery ajax callbacks
+			$(document).ajaxSend(function(){
+				console.log("show wait animation", arguments);
+			});
+			$(document).ajaxComplete(function(){
+				console.log("hide wait animation", arguments);
+			});
+
+			// test
+			$.ajax({url:"wait", success: function(){console.log(arguments);}});
+			var request = new XMLHttpRequest();
+			request.open('GET', 'wait', true);
+			request.send(null);
+		});
+	</script>
+</head>
+
+<body>
+<p>Check your console</p>
+</body>
+
+</html>
