@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		html, body{
+			margin:0;
+			padding:0;
+			height:100%;
+		}
+
+		.locklayer {
+			background: rgba(100,100,100,0.4); /* Customize the background color*/
+			position: absolute;
+			top: 0;
+			left:0;
+			width:100%;
+			height:100%;
+			z-index: 1000000;
+			text-align:center;
+		}
+		.locklayer-content{
+			margin-left: auto;
+			margin-right: auto;
+			width:320px;
+			height:50px;
+			background: #eef0b9;
+			color: #83671d;
+			border:1px solid #83671d;
+			font-family: Helvetica, Arial;
+		}
+
+		.locklayer-message{
+			width: 100%;
+			cursor: default;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		.locklayer-image {
+			margin:5px;
+			height:38px;
+			width:38px;
+			background:url(ajax-notification-image.gif) center center no-repeat;
+		}
+
+		/* nice look & feel for modern browser */
+		.locklayer-content{
+			border-radius: 5px;
+			box-shadow: 5px 5px 5px rgba(100,100,100,0.1);
+			text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+		}
+	</style>
+</head>
+<body>
+	<h1>Title</h1>
+	<p>Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu 
+		<p>
+			<h2>Subtitle</h2>
+<p>Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu Foobar Bubu 
+		<p>
+			<div class='locklayer'>
+				<table class='locklayer-content'>
+					<tr>
+						<td class='locklayer-left'>
+							<div class='locklayer-image'><!-- image from the follow page: http://www.chimply.com/Generator#classic-spinner,indicator--> </div>
+						</td>
+						<td class='locklayer-right'>
+							<div class='locklayer-message'>Bitte warten Sie bis die Daten geladen werden...</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+
+<head>
+	<script type='text/javascript' src='jquery.js'></script>
+	<script type='text/javascript' src='ajax-notification.js'></script>
+	<script type='text/javascript'>
+		$(function(){
+
+			// test
+			$.ajax({url:"wait", success: function(){console.log('jquery ajax success callback');}});
+			var request = new XMLHttpRequest();
+			request.open('GET', 'wait', true);
+			request.send(null);
+		});
+	</script>
+</head>
+
+<body>
+<p>Check your console</p>
+</body>
+
+</html>
