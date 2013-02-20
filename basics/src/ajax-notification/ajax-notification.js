@@ -79,7 +79,7 @@
 				var baseSend = XMLHttpRequest.prototype.send;
 				
 				XMLHttpRequest.prototype.send = function(){
-					
+
 					this.onloadend = onComplete;
 					
 					onStart(this)
