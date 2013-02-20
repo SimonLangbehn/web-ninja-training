@@ -9,18 +9,67 @@
 	$(function(){
 
 		var lockLayerFactory = {
-			_self: undefined, // reference to lock layer element
-			_class: 'locklayer',
-			_defaultStructure: function getHTMLStructureAsString(){
-				return '<div class="' + this._class + '"></div>';
-			},
+
+			// returns a new instance of lock layer
 			init: function initLockLayer(parent){
-				this._self = $(parent).appendTo(this.getHTMLStructureAsString());
+
+				var self = this._createContainer($(parent));
+				var content = this._createContent(self);
+				var image = this._createImage(content.find('.locklayer-left'));
+				var message = this._createMessage(content.find('.locklayer-right'));
+				var w = $(window);
+
+				function positionContent(){
+					var windowHeight = w.height();
+					var windowWidth = w.width();
+					var top = (windowHeight / 2) - (content.height() / 2);
+					var left = (windowWidth / 2) - (content.width() / 2);
+					content.css('top', top); // adjust the position of content area on window resize
+					content.css('left', left);
+				}
+
+				
+				w.resize(positionContent);
+
+				return {
+					show: function showLockLayer(){
+						positionContent();
+						self.show();
+					},
+					hide: function hideLockLayer(){
+						self.hide();
+					}
+				}
+				
+			},
+			_class: 'locklayer', // CSS class name
+			_defaultMessageText: 'Please wait until the data is retrieved.', // TODO use resource file to get localized messages.
+			
+			_createContainer: function createMainContainerForLockLayer(parent){
+				return $('<div class="' + this._class + '">').appendTo(parent);
+			},
+			_createContent: function createContentArea(parent){
+				return $('<table class="locklayer-content"><tr><td class="locklayer-left"></td><td class="locklayer-right"></td></tr></table>').appendTo(parent);
+			},
+			_createMessage: function createMessageArea(parent){
+				return $('<div class="locklayer-message">'+ this._defaultMessageText +'</div>').appendTo(parent);
+			},
+			_createImage: function createImageArea(parent){
+				return $('<div class="locklayer-image"></div>').appendTo(parent);
 			}
+		}	
+
+		var lockLayer = lockLayerFactory.init('body');
+		
+		function showLockLayer(){
+			lockLayer.show();
+			console.log('showLockLayer');
 		}
 
-		lockLayerFactory.init('body');
-
+		function hideLockLayer(){
+			lockLayer.hide();
+			console.log('hideLockLayer');
+		}
 
 		function registerAjaxCallbacks(onStart, onComplete){
 
@@ -39,6 +88,8 @@
 				};
 			}
 		}
+
+		registerAjaxCallbacks(showLockLayer, hideLockLayer);
 	});
 
 

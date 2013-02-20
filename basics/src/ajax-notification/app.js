@@ -17,7 +17,17 @@ http.createServer(function (req, res) {
       fs.readFile(url.replace('/', ''), function (err, data) {
         res.end(data);
       });
-  	}else if(url === '/wait'){
+  	}else if(url === '/ajax-notification.css'){
+      res.writeHead(200, {'Content-Type': 'text/css'});
+      fs.readFile(url.replace('/', ''), function (err, data) {
+        res.end(data);
+      });
+    }else if(url === '/ajax-notification-image.gif'){
+      res.writeHead(200, {'Content-Type': 'image/gif'});
+      fs.readFile(url.replace('/', ''), function (err, data) {
+        res.end(data);
+      });
+    }else if(url === '/wait'){
   		sleep.sleep(5);
   		res.writeHead(200);
   		res.end('sleep 5');

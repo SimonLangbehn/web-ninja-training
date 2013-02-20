@@ -1,22 +1,50 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+	<style>
+		html, body{
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+
+		}
+	</style>
 	<script type='text/javascript' src='jquery.js'></script>
 	<script type='text/javascript' src='ajax-notification.js'></script>
+	<link rel='stylesheet' type='text/css' href='ajax-notification.css' />
 	<script type='text/javascript'>
 		$(function(){
+			setTimeout(function(){
 
-			// test
-			$.ajax({url:"wait", success: function(){console.log('jquery ajax success callback');}});
-			var request = new XMLHttpRequest();
-			request.open('GET', 'wait', true);
-			request.send(null);
+				// test
+				$.ajax({url:"wait", success: function(){console.log('jquery ajax success callback');}});
+				var request = null;
+				try {
+				    // Mozilla, Opera, Safari sowie Internet Explorer (ab v7)
+				    request = new XMLHttpRequest();
+				} catch(e) {
+				    try {
+				        // MS Internet Explorer (ab v6)
+				        request  = new ActiveXObject("Microsoft.XMLHTTP");
+				    } catch(e) {
+				        try {
+				            // MS Internet Explorer (ab v5)
+				            request  = new ActiveXObject("Msxml2.XMLHTTP");
+				        } catch(e) {
+				            request  = null;
+				        }
+				    }
+				}
+				if(request){
+					request.open('GET', 'wait', true);
+					// TODO add onreadystatechange handler to request
+					request.send(null);
+				}
+
+
+			}, 2000);
 		});
 	</script>
-</head>
-
-<body>
-<p>Check your console</p>
-</body>
-
-</html>
+</head><body><p>Check your console</p></body></html>

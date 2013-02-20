@@ -1,0 +1,45 @@
+.locklayer {
+	background: rgba(100,100,100,0.4); /* Customize the background color*/
+	position: absolute;
+	top: 0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index: 1000000;
+	text-align:center;
+	display: none;
+}
+
+.locklayer-content{
+	position: absolute;
+	width:320px;
+	height:50px;
+	background: #eef0b9;
+	color: #83671d;
+	border:1px solid #83671d;
+	font-family: Helvetica, Arial;
+}
+
+.locklayer-message{
+	width: 100%;
+	cursor: default;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.locklayer-image {
+	margin:5px;
+	height:38px;
+	width:38px;
+	background:url(ajax-notification-image.gif) center center no-repeat;
+}
+
+/* nice look & feel for modern browser */
+.locklayer-content{
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px rgba(100,100,100,0.1);
+	text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+}
