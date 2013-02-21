@@ -7,10 +7,6 @@
 * CSS
 * JS
 * Node.JS
-* Ajax
-* Wireshark
-* Browser / Dev Tools
-* Links
 
 ## Ablauf
 
@@ -387,6 +383,14 @@ In diesem Beispiel wird der Style angewandt, wenn das Medium ein Bildschirm ist 
 
 [TimeTracker Demo in HTML mit CSS](../src/css/timetracker.html)
 
+# Web Ninja Workshop - Basics II
+
+## Agenda
+
+* Ajax
+* Wireshark
+* Browser / Dev Tools
+
 ## HTTP
 
 * Hypertext Transfer Protokol ist ein Transferprotokoll zur Uebertragung von Daten
@@ -402,10 +406,13 @@ In diesem Beispiel wird der Style angewandt, wenn das Medium ein Bildschirm ist 
 			* Den Typ der Inhalte
 			* Die Laenge der Inhalte
 			* Cookies
+      * User-Agent
 		* Diese Informationen sind notwendig, damit der Empfaenger die Nachricht richtig interpretiert
 		* Jede Zeile im Header wird durch einen Zeilenumbruch getrennt
 	* Nachrichtenkoerper oder auch Message Body / Body genannt
 
+*** DEMO: Skizze
+*** DEMO: HTTP mit NODE.JS
 
 * Ungueltige Zeichen in der Url werden mit %-kodiert. Leerzeichen wird zu **%20**
 * Header und Body werden durch eine Leerzeile getrennt
@@ -443,6 +450,9 @@ In diesem Beispiel wird der Style angewandt, wenn das Medium ein Bildschirm ist 
 			* Loescht Ressourcen auf dem Server
 		* Options
 			* Liefert vom Server eine Liste mit unterstuetzten Methoden und Features
+
+* DEMO: Einschraenkungen von HTTP ohne Ajax
+
 
 * Ajax
  * Asynchronous JavaScript and XML

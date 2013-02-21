@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Time Tracker - Demo mit HTML5
+	</title>
+	<link rel='stylesheet' type='text/css' href='timetracker.css'/>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900' rel='stylesheet' type='text/css'>
+	<script type='text/javascript' src='jquery-1.9.1.min.js'></script>
+</head>
+<body>
+	<section>
+		<header>
+			<h1>Time Tracker</h1>
+		</header>
+	</section>
+	<section id='new'>
+		<header>
+			<h2>New</h2>
+		</header>
+		<input type='text' value='Start'/>
+		<input type='text' value='End'/>
+		<textarea>Beschreibung</textarea>
+		<button type='button'>&rarr;</button>
+	</section>
+	<section id='history'>
+		<header>
+			<h2>History</h2>
+		</header>
+		<table>
+			<tr>
+				<th>
+					Start
+				</th>
+				<th>
+					End
+				</th>
+				<th>
+					Description
+				</th>
+			</tr>
+			<tr>
+				<td>
+					<time datetime='2013-02-07'>07.02.2013</time>
+				</td>
+				<td>
+					<time datetime='2013-02-07'>07.02.2013</time>
+				</td>
+				<td>
+					Web Ninja Workshop
+					<details> HTML, CSS, JS</details>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<time datetime='2013-02-07'>07.02.2013</time>
+				</td>
+				<td>
+					<time datetime='2013-02-07'>07.02.2013</time>
+				</td>
+				<td>
+					Web Ninja Workshop
+					<details> HTML, CSS, JS</details>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<time datetime='2013-02-07'>07.02.2013</time>
+				</td>
+				<td>
+					<time datetime='2013-02-07'>07.02.2013</time>
+				</td>
+				<td>
+					Web Ninja Workshop
+					<details> HTML, CSS, JS</details>
+				</td>
+			</tr>
+		</table>
+	</section>
+</body>
+</html>

@@ -6,6 +6,7 @@ var sleep = require('sleep');
 http.createServer(function (req, res) {
   	var url = req.url;
   	console.log(url);
+    console.log(req);
   	
   	if(url === '/'){
 		  res.writeHead(200);
